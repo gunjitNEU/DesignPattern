@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+package singletondemo;
+
+
+/** Allows the demo class to get a single package out of this class so that only ne instance can be made
+  * 
+  * @author Gunjit Arora
+  * @version 1.0
+ */
+public class SingleObject {
+    private static final SingleObject instance = new SingleObject();
+    public int objectNumber;
+
+    public int getObjectNumber() {
+        return objectNumber;
+    }
+
+    public void setObjectNumber(int objectNumber) {
+        this.objectNumber = objectNumber;
+    }
+    
+    private SingleObject() {}
+    
+    
+    /**
+     * Returns an instance of this class; Can only be used once.
+     * 
+     * @return An object of type SingleObject
+     */
+    public static SingleObject getInstance() {
+        return instance;
+    }
+    
+    /**
+     * Displays a random String, "Hello, World!" in this case; Does not return anything.
+     */
+    public void showMessage() {
+        System.out.println("Hello, World!");
+    }
+}
